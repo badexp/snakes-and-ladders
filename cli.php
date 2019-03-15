@@ -17,6 +17,7 @@ $loader = new Loader();
 $loader->registerDirs(
     [
         __DIR__ . '/tasks',
+        __DIR__ . '/lib'
     ]
 );
 
