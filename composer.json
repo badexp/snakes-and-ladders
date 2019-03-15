@@ -1,6 +1,6 @@
 {
     "name": "igor/test-game",
-    "require": {
-        "phpunit/phpunit-mock-objects": "^6.1"
+    "require-dev": {
+        "phpunit/phpunit": "^7"
     }
 }
