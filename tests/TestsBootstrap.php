@@ -9,7 +9,7 @@ $loader = new Loader();
 
 $loader->registerDirs(
     [
-        __DIR__ . '/../lib'
+        __DIR__ . '/../src/lib'
     ]
 );
 
