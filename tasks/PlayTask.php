@@ -19,6 +19,7 @@ class PlayTask extends Task
         print(PHP_EOL.'Game was started'.PHP_EOL);
         while(!$game->isFinished())
         {
+            sleep(1);
             $game->move(rand(1, 6));
             print($game->getLastMove().' - '.$game->getCurrentFieldType().$game->getCurrentProgress().PHP_EOL);
         }
