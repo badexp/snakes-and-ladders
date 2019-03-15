@@ -1,0 +1,4 @@
+<?php
+/**
+ * Play the game
+ */
