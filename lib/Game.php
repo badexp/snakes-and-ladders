@@ -18,6 +18,8 @@ class Game
     function __construct()
     {
         $this->currentField = 1;
+        $this->currentProgress = 1;
+        $this->lastMove = 0;
     }
 
     /**
@@ -26,7 +28,7 @@ class Game
      */
     function isFinished(): bool
     {
-        return $this->currentField === 100;
+        return $this->currentProgress === 100;
     }
 
     /**
@@ -35,7 +37,16 @@ class Game
      */
     function move($step): void
     {
-        // TODO: all game logic goes here
+        $this->lastMove = $step;
+        $this->currentField = $this->currentProgress + $step;
+        $currentFieldType = $this->getCurrentFieldType();
+        if ($currentFieldType === 'snake') {
+            $this->currentProgress = $this->currentField - 3;
+        } else if($currentFieldType === 'ladder') {
+            $this->currentProgress = $this->currentField + 10;
+        } else if ($this->currentField <= 100) {
+            $this->currentProgress = $this->currentField;
+        }
     }
 
     /**
